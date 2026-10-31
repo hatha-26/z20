@@ -250,7 +250,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 
 /* ---------- foto beterbangan di hero ---------- */
 .script-stack { position: relative; z-index: 2; }
-.float-photo { --k: 1; --w: calc(var(--s) * var(--k)); position: absolute; bottom: -220px; left: min(var(--x), calc(100% - var(--w) - 10px)); width: var(--w); height: var(--w); z-index: 0; pointer-events: none; animation: photo-rise var(--d) linear var(--delay) infinite; filter: drop-shadow(0 12px 14px rgba(255, 95, 158, .35)); will-change: transform; }
+.float-photo { --k: 1; --w: calc(var(--s) * var(--k)); position: absolute; bottom: -220px; left: clamp(6px, var(--x), calc(100% - var(--w) - 30px)); width: var(--w); height: var(--w); z-index: 0; pointer-events: none; animation: photo-rise var(--d) linear var(--delay) infinite; filter: drop-shadow(0 12px 14px rgba(255, 95, 158, .35)); will-change: transform; }
 .float-photo.heart { --w: calc(var(--s) * var(--k) * 1.3); }
 .fp-shape { width: 100%; height: 100%; background: #fff; }
 .fp-inner { position: absolute; inset: 5px; display: grid; place-items: center; overflow: hidden; background: var(--tint); font-size: calc(var(--s) * .42); }
@@ -262,11 +262,15 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 .float-photo.card .fp-inner { inset: 5px 5px 18px; border-radius: 6px; }
 @keyframes photo-rise {
   0%   { transform: translate3d(0, 0, 0) rotate(calc(var(--r) * -1)); }
-  50%  { transform: translate3d(34px, -70vh, 0) rotate(var(--r)); }
-  100% { transform: translate3d(-22px, -135vh, 0) rotate(calc(var(--r) * -1)); }
+  50%  { transform: translate3d(var(--dx1, 34px), -70vh, 0) rotate(var(--r)); }
+  100% { transform: translate3d(var(--dx2, -22px), -135vh, 0) rotate(calc(var(--r) * -1)); }
 }
-@media (max-width: 600px) { .float-photo { --k: .72; } }
+@media (max-width: 600px) { .float-photo { --k: .72; --dx1: 8px; --dx2: -8px; } }
 @media (prefers-reduced-motion: reduce) { .float-photo { animation: none !important; bottom: 12%; } }
+@media (max-width: 600px) {
+  .float-photo.heart .fp-shape,
+  .float-photo.heart .fp-inner { clip-path: none; border-radius: 50%; }
+}
 
 /* ---------- quiz suara ---------- */
 .mic-wrap {
