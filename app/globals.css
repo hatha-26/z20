@@ -254,7 +254,7 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 .float-photo.heart { --w: calc(var(--s) * var(--k) * 1.3); }
 .fp-shape { width: 100%; height: 100%; background: #fff; }
 .fp-inner { position: absolute; inset: 5px; display: grid; place-items: center; overflow: hidden; background: var(--tint); font-size: calc(var(--s) * .42); }
-.fp-inner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fp-inner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .float-photo.heart .fp-shape { clip-path: url(#heart-clip); }
 .float-photo.heart .fp-inner { clip-path: url(#heart-clip); inset: 6px; }
 .float-photo.card { --w: calc(var(--s) * var(--k) * 1.1); height: calc(var(--w) * 1.32); }
