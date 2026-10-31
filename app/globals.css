@@ -352,9 +352,3 @@ button { font: inherit; color: inherit; border: 0; background: none; cursor: poi
 .q-feedback.wrong { color: #e0566b; font-weight: 500; }
 .q-skip { color: var(--muted); text-decoration: underline; margin-top: -4px; }
 
-/* HP: foto ditampilkan UTUH di dalam bingkai (heart tetap heart, polaroid tetap polaroid) */
-@media (max-width: 600px) {
-  .float-photo.heart { --k: .95; }
-  .float-photo.heart .fp-inner { padding: 17% 15% 35%; }
-  .float-photo .fp-inner img { object-fit: contain; }
-}
