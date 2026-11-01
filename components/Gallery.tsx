@@ -15,7 +15,7 @@ export default function Gallery() {
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
         <h2 className="title">Kenangan <span className="grad">kita</span> 📸</h2>
-        <p className="sub">geser ke samping →</p>
+        <p className="sub">maaf ya momen yang aku berikan tidak banyak, nanti nge lag</p>
       </motion.div>
 
       <div className="scroller">

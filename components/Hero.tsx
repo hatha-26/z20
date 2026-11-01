@@ -40,7 +40,7 @@ const tints = [
 
 // Judul ditulis berurutan: baris 1 → baris 2 → nama
 const LINE1 = "Selamat";
-const LINE2 = "Ulang Tahun";
+const LINE2 = "merayakan 2";
 const T0 = 0.7;
 const T1 = T0 + writeDuration(LINE1) * 0.75;
 const T2 = T1 + writeDuration(LINE2) * 0.75;
@@ -115,7 +115,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease, delay: 0.1 }}
         >
-          {config.dateText} · hari spesial
+          {config.dateText} · semesta merayakanmu
         </motion.p>
         <h1 aria-label="Selamat Ulang Tahun">
           <ScriptText text={LINE1} delay={T0} />

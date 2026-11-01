@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { config } from "@/lib/config";
 import { cannons, emojiRain } from "@/lib/confetti";
 import ScriptText from "./ScriptText";
@@ -18,9 +18,9 @@ export default function Finale() {
       </motion.div>
       <h2
         className="finale-script"
-        aria-label={`Selamat ulang tahun, ${config.name}`}
+        aria-label={`Selamat ulang tahun ke 2, ${config.name}`}
       >
-        <ScriptText text="Selamat ulang tahun," inView />
+        <ScriptText text="Selamat ulang tahun ke 2" inView />
         <ScriptText
           text={config.name}
           inView
@@ -38,6 +38,7 @@ export default function Finale() {
       >
         Aku sayang kamu. Hari ini, besok, dan seterusnya.
       </motion.p>
+      <p>Sekarang buka kadonya sayang, meskipun itu pilihan kamu, bukan surprise, hehe</p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

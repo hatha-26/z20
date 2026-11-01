@@ -43,7 +43,7 @@ export default function Reasons() {
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
         <h2 className="title">Kenapa aku <span className="grad">sayang</span> kamu 💌</h2>
-        <p className="sub">ini baru sebagian kecil, lho</p>
+        <p className="sub">ini baru sebagian kecil glo</p>
       </motion.div>
       <div className="grid">
         {config.reasons.map((r, i) => (

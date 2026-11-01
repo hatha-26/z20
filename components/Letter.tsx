@@ -18,7 +18,7 @@ function Typewriter({ text, speed = 38 }: { text: string; speed?: number }) {
       <motion.span animate={{ opacity: [1, 0, 1] }} transition={{ repeat: Infinity, duration: 0.9 }}>|</motion.span>
       {n >= text.length && (
         <motion.div className="sign" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-          dengan sayang,<br />{config.from} 💗
+          dengan cinta,<br />{config.from} 💗
         </motion.div>
       )}
     </>
